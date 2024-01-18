@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline-offset: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --- Scrollbar --- */
+html {
+    --scrollbarBG: #cfd8dc;
+    --thumbBG: #0937c1;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+/* --- Scrollbar --- */
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #2c3e50; /* Dark background color */
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.sidebar .logo {
+    height: 60px;
+    padding: 1rem;
+}
+
+.sidebar .menu {
+    height: 85%;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar .menu li:hover,
+.sidebar .active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .menu a {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #bdbdbd;
+}
+
+.sidebar .menu a i {
+    font-size: 1.2rem;
+}
+
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background-color: #ffffff58;
+}
+
+.menu a {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #adadad;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ----- MAIN CONTENT SECTION ------------ */
+.main--content {
+    position: relative;
+    background: #f8e5e5;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: rgba(113, 99, 186, 255);
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.search--box {
+    background: rgb(237, 237, 246);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search--box i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
+
+/* ----------  CARD CONTAINER ---------------*/
+.card--container {
+    background: #f9f9f9; /* Light background color */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Increased gap for a more spacious look */
+}
+
+.main--title {
+    color: #715fbaff; /* Purple color with alpha for a subtle look */
+    padding-bottom: 15px; /* Increased padding for separation */
+    font-size: 18px; /* Larger font size */
+    font-weight: 600; /* Bolder font weight */
+}
+
+.payment--card {
+    background: #ffe0d6; /* Soft peach color for the card background */
+    border-radius: 10px;
+    padding: 1.5rem; /* Increased padding for better spacing */
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.payment--card:hover {
+    transform: translateY(-8px); /* Slightly increased hover effect */
+}
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 14px; /* Larger font size for the title */
+    font-weight: 400; /* Standard font weight */
+}
+
+.amount--value {
+    font-size: 28px; /* Larger font size for the value */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #4a4a4a; /* Darker color for better visibility */
+}
+
+/* Styling for the outer span with class 'profile' */
+.profile {
+    display: inline-block; /* This makes the span a block-level element with inline properties */
+    padding: 25px; /* Adjust the padding as needed */
+    border-radius: 50%; /* This creates a circular shape for the span */
+}
+
+/* Styling for the inner i element */
+.profile i {
+    font-size: 50px; /* Set a larger font size for the user circle icon */
+    color: #676469; /* Set the color to a light violet shade */
+}
+
+
+.icon {
+    color: #b9b7b7;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+.card-detail {
+    font-size: 18px;
+    color: #dcd8d8;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ----- COLOR CSS ------ */
+.light-red {
+    background: rgb(235, 234, 234);
+}
+
+.light-purple {
+    background: rgb(254, 226, 254);
+}
+
+.light-green {
+    background: rgb(235, 254, 235);
+}
+
+.light-blue {
+    background: rgb(236, 236, 254);
+}
+
+.light-orange {
+    background: rgb(248, 175, 28);
+}
+
+.dark-red {
+    background: red;
+}
+
+.dark-purple {
+    background: rgb(81, 69, 81);
+}
+
+.dark-green {
+    background: rgb(64, 174, 64);
+}
+
+.dark-blue {
+    background: rgb(12, 12, 125);
+}
+
+.dark-orange {
+    background: rgb(91, 59, 1);
+}
+
+/* Reset default margin and padding */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Tabular Wrapper Styles */
+.tabular--wrapper {
+    margin-top: 20px;
+}
+
+/* Main Title Styles */
+.main--title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333; /* Dark color for better readability */
+    font-weight: 600; /* Bolder font weight */
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+
+tbody {
+    background: #ffffff; /* White background for better contrast */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px; /* Slight border radius for a modern touch */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Blue color for header background */
+    color: white;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Clickable Row Styles */
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clickable-row:hover {
+    background-color: #f0f0f0;
+}
+
+/* Button Styles */
+.action-btn {
+    padding: 10px 15px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: #4caf50; /* Green color for buttons */
+    color: #fff; /* White text color */
+    font-size: 14px; /* Standard font size */
+}
+
+.action-btn:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+
+/* Edit Button Styles */
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Delete Button Styles */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Approved Button Styles */
+.approved-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hover effect for buttons */
+.action-btn:hover {
+    background-color: #555;
+}
+
+/* Divider Styles */
+.divider {
+    width: 1px;
+    background-color: #ddd;
+}
+
+/* Add divider to table headers */
+th:not(:last-child) {
+    border-right: none;
+}
+
+/* Add divider to table cells */
+td:not(:last-child) {
+    border-right: none;
+}
+
+/* Add divider to table rows */
+tr:not(:last-child) td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Icon in the header section */
+.header--wrapper .icon {
+    font-size: 50px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-left: 15px;
+    color: rgba(113, 99, 186, 255);
+}
+
+.header--wrapper .icon:hover {
+    transform: scale(1.1);
+}
+/* Add this CSS to your existing CSS file or create a new one */
+
+.logout-item {
+    list-style-type: none;
+}
+
+.logout-btn {
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Adjust padding as needed */
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.logout-btn i {
+    margin-right: 10px; /* Adjust the icon's right margin as needed */
+}
+
+/* Hover effect */
+.logout-btn:hover {
+    background-color: #333; /* Darker color on hover */
+}
+.custom-approve-btn {
+    background-color: #00ff00; /* Green color */
+    color: #fff; /* White text color, adjust as needed */
+}
+
+.custom-approve-btn:hover {
+    background-color: #00cc00; /* Darker green color on hover, adjust as needed */
+}

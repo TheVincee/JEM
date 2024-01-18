@@ -1,0 +1,172 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.filter-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.filter-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+select, input {
+    padding: 16px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 14px 28px; /* Adjusted button size */
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.courier-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.courier-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 300px; /* Adjusted card size */
+    transition: transform 0.3s ease-in-out;
+}
+
+.courier-card:hover {
+    transform: scale(1.05);
+}
+
+.availability-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.availability-label {
+    margin-right: 5px;
+}
+
+.availability-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.availability-1 .availability-indicator {
+    background-color: #4CAF50; /* Green */
+}
+
+.availability-0 .availability-indicator {
+    background-color: #d9534f; /* Red */
+}
+
+.package-delivery-btn, .book-ride-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px; /* Adjusted button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 60%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.package-delivery-btn:hover, .book-ride-btn:hover {
+    background-color: #0056b3;
+}
+.courier-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.courier-card:hover {
+    transform: scale(1.05);
+}
+
+.info-line {
+    margin-bottom: 10px;
+}
+
+.availability-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.available .availability-indicator {
+    background-color: #4CAF50; /* Green */
+}
+
+.not-available .availability-indicator {
+    background-color: #d9534f; /* Red */
+}
+
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}

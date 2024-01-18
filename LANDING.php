@@ -38,12 +38,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.col-sm-6 img {
-    max-width: 100%; /* Make sure the image doesn't exceed its container */
-    height: auto; /* Maintain the image's aspect ratio */
-    border-radius: 8px; /* Add some border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-}
+img {
+      width: 1000px; /* Set the width */
+   height: 600px; /* Set the height */
+  /* You can also add other styling properties here, such as border-radius, box-shadow, etc. */
+        }
+
 .hero button {
     background-color: #ffffff;
     color: #007bff;
